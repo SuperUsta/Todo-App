@@ -36,7 +36,7 @@ class _HomepageState extends State<Homepage> {
                         future: _dbHelper.getTasks(),
                         builder: (context, AsyncSnapshot snapshot) {
                           return ListView.builder(
-                              itemCount: snapshot.data.hashCode,
+                              itemCount: snapshot.data.lenght,
                               itemBuilder: (context, index) {
                                 return TaskCardWidget(
                                   title: snapshot.data[index].title,
